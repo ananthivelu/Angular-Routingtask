@@ -1,0 +1,172 @@
+.fullcontainer
+{
+  background-color: burlywood;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+  
+}
+html,body{
+  
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background-color:  wheat;
+  box-sizing: border-box;
+  
+  
+}
+
+.full{
+  overflow: hidden;
+  max-width: 350px;
+  background:whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  
+}
+.full h1{
+color:#0f0f0f;
+font-weight:80px;
+text-align: center;
+
+}
+
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.0s ease;
+}
+.form-inner form .field input:focus{
+  border-color:#050505;
+  border-radius: 20px;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.0s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: hsl(180, 4%, 5%);
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration:none;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #c7d8a7, #afc5c7, #515297, #daa7da);
+  border-radius: 5px;
+  transition: all 0.0s ease;
+  overflow:hidden;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.invalid-feedback{
+  color:rgb(177, 24, 24);
+  font-size:15px;
+}
+.pass-link p{
+  text-align:center;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  padding-left:1009px;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/*.topnav a {
+  float: left;
+  color: #130a0a;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.btncls{
+  background-color:red;
+  padding: 1px;
+  box-shadow:red;
+}*/

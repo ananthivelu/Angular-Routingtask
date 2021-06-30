@@ -1,0 +1,81 @@
+<html>
+    <header>
+  
+        <div class="topnav">
+          <a [routerLink]="['/register']" routerLinkActive="'is-active'"><button class="btncls">Register</button></a>
+          <a routerLink="/login" routerLinkActive=""><button class="btncls">Login</button></a>
+          <a routerLink="/login" routerLinkActivate="" (click)="onLogout()"><button class="btncls">Logout</button></a>
+        </div>
+      </header><br>
+<div class="full">
+    <div class="container">
+        <div class="row">
+            <div class="form-inner">
+                <h1>Register</h1>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name field is required</div>
+                            <div *ngIf="f.firstName.errors.pattern">It accepts only characters</div>
+                        </div>
+                    </div><br>
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">This field is required</div>
+                            <div *ngIf="f.lastName.errors.pattern">It accepts only characters</div>
+                            </div>
+                    </div><br>
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Please Enter valid email address</div>
+                        </div>
+                    </div><br>
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password field is required</div>
+                            <div *ngIf="f.password.errors.pattern">Please fill strong password with uppercase,lowercase,numbers and special symbolsr</div>
+                            </div>
+                    </div><br>
+                    <div class="field">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.confirmPassword.errors.MustMatch">This field must match with Password field</div>
+                        </div>
+                    </div>
+                    <br>
+                 
+                    <div class="field">
+                     <label>Phone Number</label>
+                     <input type="text" formControlName="phoneNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+                     <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                         <div *ngIf="f.phoneNumber.errors.required">This field is required</div>
+                         <div *ngIf="f.phoneNumber.errors.pattern">This field contains only 10 digits and start with 6 or 7 or 8 or 9</div>
+                     </div>
+                 </div>
+                 <br>
+                    <div class="field btn">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="Register">
+                   </div>
+                   <p class="pass-link">
+                     Already have an account? <a routerLink="/login" routerLinkActive=""><br><br><b>Login</b></a>
+                   </p>
+                </form>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+
+ 
